@@ -10,12 +10,12 @@ pipeline{
         }
     
         stage('dockerbuild'){
-            stage{
+            
                 steps{
                     sh 'docker build -t webapp .'
                     sh 'docker images'
                 }
-            }
+            
 
         }
     }
