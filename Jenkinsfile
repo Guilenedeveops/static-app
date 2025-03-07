@@ -43,7 +43,7 @@ pipeline{
         stage('Dockertest'){
             steps{
                 sh 'docker images'
-                sh 'docker run -itd --name web -p 82:80 revision-repo'
+                sh 'docker run -itd --name web1 -p 83:80 revision-repo'
                 sh 'docker ps'
                 
                 
