@@ -13,7 +13,7 @@ pipeline{
             
                 steps{
                     sh 'docker build -t revision-repo .'
-                    sh 'docker build -t newversion'
+                    sh 'docker build -t newversion .'
                     sh 'docker images'
                 }
             
