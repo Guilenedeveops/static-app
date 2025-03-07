@@ -40,5 +40,15 @@ pipeline{
                 
             }
         }
-    }
+        stage('Dockertest'){
+            steps{
+                sh 'docker images'
+                sh 'docker run -itd --name web -p 8080 revision-repo'
+                sh 'docker ps'
+                
+                
+            }
+        }
+
+            }
 }
