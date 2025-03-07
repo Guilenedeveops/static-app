@@ -29,14 +29,14 @@ pipeline{
          stage('Dockertag'){
             steps{
                 sh 'docker tag revision-repo:latest 867344455679.dkr.ecr.us-east-1.amazonaws.com/revision-repo:latest'
-                sh 'docker tag revision-repo:latest 867344455679.dkr.ecr.us-east-1.amazonaws.com/revision-repo:v1:$BUILD_NUMBER'
+                sh 'docker tag revision-repo:latest 867344455679.dkr.ecr.us-east-1.amazonaws.com/revision-repo:v1.$BUILD_NUMBER'
                 
             }
         }
         stage('Dockerpush'){
             steps{
                 sh 'docker push 867344455679.dkr.ecr.us-east-1.amazonaws.com/revision-repo:latest'
-                sh 'docker push 867344455679.dkr.ecr.us-east-1.amazonaws.com/revision-repo:v1:$BUILD_NUMBER'
+                sh 'docker push 867344455679.dkr.ecr.us-east-1.amazonaws.com/revision-repo:v1.$BUILD_NUMBER'
                 
             }
         }
