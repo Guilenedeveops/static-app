@@ -12,7 +12,7 @@ pipeline{
         stage('dockerbuild'){
             stage{
                 steps{
-                    sh 'docker built -t webapp .'
+                    sh 'docker build -t webapp .'
                     sh 'docker images'
                 }
             }
