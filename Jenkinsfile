@@ -1,14 +1,7 @@
 pipeline{
     agent { label 'ubuntu-agent'}
     stages{
-        stage('codescan'){
-            steps{
-                sh 'trivy fs . -o file.txt'
-                sh 'cat file.txt'
-
-            }
-        }
-    
+       
         stage('dockerbuild'){
             
                 steps{
